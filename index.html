@@ -12,75 +12,79 @@
 </head>
 <body>
 
-  <!--begin visible content of the page-->
-  <main class="container">
-    <!--the header-->  
-    <header class="row">
-      <h1>Weather Dashboard</h1>
-    </header>
-    <!--the main body-->
-    <div class="row">
-      <!--side section-->
-      <section class="col">
-        <div id="search">
-          <h2>Search for a City:</h2>
-          <!--insert bootstrap search bar here-->
-        </div>
-        <!--citylist draws from local storage using javascript-->
-        <div id="citylist"></div>
+
+  <!--the header-->  
+  <header class="row">
+    <h1>Weather Dashboard</h1>
+  </header>
+
+<div class="container">
+  <!--the main body-->
+  <main class="row">
+    <!--side section-->
+    <aside class="col-3">
+      <form>
+        <label for="search">Search for a City:</label>
+        <input type="text" name="search" id="query" />
+        <button type="submit" id="submit" class="fa fa-search btn"></button>
+      </form>
+      <!--citylist draws from local storage using javascript-->
+      <div id="citylist"></div>
+    </aside>
+    <!--the main section-->
+    <section class="col-8">
+      <!--current city's current weather-->
+      <section class="row" id="today">
+        <h2 id="todaycitydateicon" aria-placeholder="Chose a City!"></h2>
+        <p>Temperature: <span id="todaytemp"></span></p>
+        <p>Humidity: <span id="todayhumid"></span></p>
+        <p>Wind Speed: <span id="todaywind"></span></p>
+        <p>UV Index: <span id="todayuv"></span></p>
       </section>
-      <!--the main section-->
-      <section class="col">
-        <!--current city's current weather-->
-        <section class="row" id="today">
-          <h2 id="todaycitydateicon" aria-placeholder="Chose a City!"></h2>
-          <p id="todaytemp">Temperature: </p>
-          <p id="todayhumid">Humidity: </p>
-          <p id="todaywindspd">Wind Speed: </p>
-          <p id="todayuv">UV Index: <span id="coloruv"></span></p>
-        </section>
-        <!--5 day forecast for current city-->
-        <section class="row" id="5days">
-          <h2>5-Day Forecast</h2>
+      <!--5 day forecast for current city-->
+      <section class="row" id="5days">
+        <h2>5-Day Forecast</h2>
+        <div class="card-deck">
           <!--day 1 aka today-->
-          <card class="" id="day1card">
+          <div class="card" id="day1card">
             <h3 id="day1date"></h3>
             <img id="day1icon" />
-            <p id="day1temp">Temp: </p>
-            <p id="day1humid">Humidity: </p>
-          </card>
-          <!--day 2 aka tommorow-->
-          <card class="" id="day2card">
+            <p>Temp: <span id="day1temp"></span></p>
+            <p>Humidity: <span id="day1humid"></span></p>
+          </div>
+          <!--day 2 aka tomorrow-->
+          <div class="card" id="day2card">
             <h3 id="day2date"></h3>
             <img id="day2icon" />
-            <p id="day2temp">Temp: </p>
-            <p id="day2humid">Humidity: </p>
-          </card>
+            <p>Temp: <span id="day2temp"></span></p>
+            <p>Humidity: <span id="day2humid"></span></p>
+          </div>
           <!--day 3 aka the day after tomorrow-->
-          <card class="" id="day3card">
+          <div class="card" id="day3card">
             <h3 id="day3date"></h3>
             <img id="day3icon" />
-            <p id="day3temp">Temp: </p>
-            <p id="day3humid">Humidity: </p>
-          </card>
+            <p>Temp: <span id="day3temp"></span></p>
+            <p>Humidity: <span id="day3humid"></span></p>
+          </div>
           <!--day 4 aka 3 days from now-->
-          <card class="" id="day4card">
+          <div class="card" id="day4card">
             <h3 id="day4date"></h3>
             <img id="day4icon" />
-            <p id="day4temp">Temp: </p>
-            <p id="day4humid">Humidity: </p>
-          </card>
+            <p>Temp: <span id="day4temp"></span></p>
+            <p>Humidity: <span id="day4humid"></span></p>
+          </div>
           <!--day 5 aka 4 days from now-->
-          <card class="" id="day5card">
-            <h3 id="day5date"></h3>
-            <img id="day5icon" />
-            <p id="day5temp">Temp: </p>
-            <p id="day5humid">Humidity: </p>
-          </card>
-        </section> <!--end of 5 day forecast section-->
-      </section> <!--end of main section-->
-    </div> <!--end of the big main section-->
+          <div class="card" id="day4card">
+            <h3 id="day4date"></h3>
+            <img id="day4icon" />
+            <p>Temp: <span id="day4temp"></span></p>
+            <p>Humidity: <span id="day4humid"></span></p>
+          </div>
+        </div> <!--end of card-deck-->
+      </section> <!--end of 5 day forecast section-->
+    </section> <!--end of main section-->
   </main> <!--end of visible page content-->
+</div> <!--end of div that exists purely to give me a container-->
 
   <!--moment, jQuery, and script.js-->
   <script src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js'></script>

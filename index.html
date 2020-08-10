@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--bootstrap, fonts, and style.css-->
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
+    integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
+  <script src="https://use.fontawesome.com/0d701d042a.js"></script>
+  <link rel="stylesheet" href="./assets/style.css" />
+  <title>Weather Dashboard</title>
+</head>
+<body>
+
+  <!--begin visible content of the page-->
+  <main class="container">
+    <!--the header-->  
+    <header class="row">
+      <h1>Weather Dashboard</h1>
+    </header>
+    <!--the main body-->
+    <div class="row">
+      <!--side section-->
+      <section class="col">
+        <div id="search">
+          <h2>Search for a City:</h2>
+          <!--insert bootstrap search bar here-->
+        </div>
+        <!--citylist draws from local storage using javascript-->
+        <div id="citylist"></div>
+      </section>
+      <!--the main section-->
+      <section class="col">
+        <!--current city's current weather-->
+        <section class="row" id="today">
+          <h2 id="todaycitydateicon" aria-placeholder="Chose a City!"></h2>
+          <p id="todaytemp">Temperature: </p>
+          <p id="todayhumid">Humidity: </p>
+          <p id="todaywindspd">Wind Speed: </p>
+          <p id="todayuv">UV Index: <span id="coloruv"></span></p>
+        </section>
+        <!--5 day forecast for current city-->
+        <section class="row" id="5days">
+          <h2>5-Day Forecast</h2>
+          <!--day 1 aka today-->
+          <card class="" id="day1card">
+            <h3 id="day1date"></h3>
+            <img id="day1icon" />
+            <p id="day1temp">Temp: </p>
+            <p id="day1humid">Humidity: </p>
+          </card>
+          <!--day 2 aka tommorow-->
+          <card class="" id="day2card">
+            <h3 id="day2date"></h3>
+            <img id="day2icon" />
+            <p id="day2temp">Temp: </p>
+            <p id="day2humid">Humidity: </p>
+          </card>
+          <!--day 3 aka the day after tomorrow-->
+          <card class="" id="day3card">
+            <h3 id="day3date"></h3>
+            <img id="day3icon" />
+            <p id="day3temp">Temp: </p>
+            <p id="day3humid">Humidity: </p>
+          </card>
+          <!--day 4 aka 3 days from now-->
+          <card class="" id="day4card">
+            <h3 id="day4date"></h3>
+            <img id="day4icon" />
+            <p id="day4temp">Temp: </p>
+            <p id="day4humid">Humidity: </p>
+          </card>
+          <!--day 5 aka 4 days from now-->
+          <card class="" id="day5card">
+            <h3 id="day5date"></h3>
+            <img id="day5icon" />
+            <p id="day5temp">Temp: </p>
+            <p id="day5humid">Humidity: </p>
+          </card>
+        </section> <!--end of 5 day forecast section-->
+      </section> <!--end of main section-->
+    </div> <!--end of the big main section-->
+  </main> <!--end of visible page content-->
+
+  <!--moment, jQuery, and script.js-->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script src="./assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+/* CSS for Weather Dashboard */
+
+/*header stuff*/
+header {
+  /*make flush agenst top and sides but have cusening below*/
+  background-color: black;
+  color: white;
+}
+
+/*homebrewed containers for each of the 3 sections*/
+#city-container {
+  padding: 20px;
+  margin: 20px;
+}
+#today-container {
+  padding: 20px;
+  margin: 20px;
+}
+#forecast-container {
+  padding: 20px;
+  margin: 20px;
+}
+
+/*make search button be aligened with the search bar somehow*/
+
+/*make the city and forecast headers be on their own lines*/
+
+/*card stylings*/
+.card {
+  background-color: blue;
+  color: white;
+}
+
+/*more specific stylings here if I have time*/

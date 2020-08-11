@@ -11,11 +11,16 @@ server-side APIs coding boot-camp HW
 
 ## Usage
 
-[insert instructions for using the aplication here]
+Search for a city in the search bar to see what the weather for that city is today, as well as for the next 5 days. Your most recent searches will be saved to local storage so that if you leave and come back later you can still look with the click of a button.
 
 ## Credits
 
-API's for the 5 day weather forecast and UV index are from [OpenWeatherMap](https://openweathermap.org/).
+API's used for this project are from [OpenWeatherMap](https://openweathermap.org/). They are:
+ * [Current Weather Data](https://openweathermap.org/current)
+ * [5 Day Weather Forecast](https://openweathermap.org/forecast5)
+ * [Ultraviolet Index](https://openweathermap.org/api/uvi)
+
+Code exchange with [Nick Konzen](https://github.com/NTKonzen)
 
 ## License
 

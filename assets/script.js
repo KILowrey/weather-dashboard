@@ -37,6 +37,23 @@ function displayWeather(city) {
   })
 }
 
+function displayForecast(city) {
+  $('#day1date').text(moment().format('MM/DD/YYYY'));
+  $('#day2date').text(moment().add(+1, 'days').format('MM/DD/YYYY'));
+  $('#day3date').text(moment().add(+2, 'days').format('MM/DD/YYYY'));
+  $('#day4date').text(moment().add(+3, 'days').format('MM/DD/YYYY'));
+  $('#day5date').text(moment().add(+4, 'days').format('MM/DD/YYYY'));
+  $.ajax({
+    'url': "api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=" + APIKey,
+    'method': 'GET',
+    'success': response => {
+      $('#day1icon').append(),
+      $('#day1temp').text(),
+      $('#day1humid').text(),
+    }
+  })
+}
+
 //set click event on search submit button
 $("#submit").on("click", function(){
 
